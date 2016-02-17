@@ -1,0 +1,107 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+   config.vm.define "node1" do |node1|
+    node1.vm.box = "centos/7"
+    node1.vm.box_check_update = false
+    node1.vm.hostname = "node1"
+    node1.vm.network "public_network", bridge: "wlan0"
+    #node1.vm.network "private_network", ip: "192.168.33.11"
+    node1.vm.provider "virtualbox" do |vb|
+     vb.gui =  true
+     vb.memory = "1500"
+     vb.name = "node1"
+    end
+    #config.vm.provision "shell", inline: <<-SHELL
+    #sudo yum update -y
+    #sudo 
+    #SHELL
+   end
+config.vm.define "node2" do |node2|
+    node2.vm.box = "centos/7"
+    node2.vm.box_check_update = true
+    node2.vm.hostname = "node2"
+    node2.vm.network "public_network", bridge: "wlan0"
+
+    #node2.vm.network "private_network", ip: "192.168.33.12"
+    node2.vm.provider "virtualbox" do |vb|
+     vb.gui =  true
+     vb.memory = "1500"
+     vb.name = "node2"
+    end
+    #config.vm.provision "shell", inline: <<-SHELL
+    #sudo yum update -y
+    #SHELL
+   end
+config.vm.define "node3" do |node3|
+    node3.vm.box = "centos/7"
+    node3.vm.box_check_update = true
+    node3.vm.hostname = "node3"
+    node3.vm.network "public_network", bridge: "wlan0"
+
+
+    #node3.vm.network "private_network", ip: "192.168.33.13"
+    node3.vm.provider "virtualbox" do |vb|
+     vb.gui =  true
+     vb.memory = "1500"
+     vb.name = "node3"
+    end
+    #config.vm.provision "shell", inline: <<-SHELL
+    #sudo yum update -y
+    #SHELL
+   end
+config.vm.define "node4" do |node4|
+    node4.vm.box = "centos/7"
+    node4.vm.box_check_update = true
+    node4.vm.hostname = "node4"
+    node4.vm.network "public_network", bridge: "wlan0"
+
+
+    #node4.vm.network "private_network", ip: "192.168.33.14"
+    node4.vm.provider "virtualbox" do |vb|
+     vb.gui =  true
+     vb.memory = "1500"
+     vb.name = "node4"
+    end
+    #config.vm.provision "shell", inline: <<-SHELL
+    #sudo yum update -y
+    #SHELL
+   end
+config.vm.define "node5" do |node5|
+    node5.vm.box = "centos/7"
+    node5.vm.box_check_update = true
+    node5.vm.hostname = "node5"
+    node5.vm.network "public_network", bridge: "wlan0"
+
+
+    #node5.vm.network "private_network", ip: "192.168.33.15"
+    node5.vm.provider "virtualbox" do |vb|
+     vb.gui =  true
+     vb.memory = "1500"
+     vb.name = "node5"
+    end
+    #config.vm.provision "shell", inline: <<-SHELL
+    #sudo yum update -y
+    #SHELL
+   end
+config.vm.define "node6" do |node6|
+    node6.vm.box = "centos/7"
+    node6.vm.box_check_update = true
+    node6.vm.hostname = "node6"
+    node6.vm.network "public_network", bridge: "wlan0"
+
+
+    #node6.vm.network "private_network", ip: "192.168.33.16"
+    node6.vm.provider "virtualbox" do |vb|
+     vb.gui =  true
+     vb.memory = "1500"
+     vb.name = "node6"
+    end
+    #config.vm.provision "shell", inline: <<-SHELL
+    #sudo yum update -y
+    #SHELL
+   end
+
+
+end
